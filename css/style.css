@@ -1,0 +1,542 @@
+/*  Variables */
+:root {
+  --main-color: #5624d0;;
+  
+}
+
+/* style Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+    Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+span a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* -------------header nav----------------------------*/
+
+header {
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 2px 20px grey;
+  z-index: 1;
+}
+
+header nav {
+  background-color: white;
+  width: calc(100% - 30px);
+  height: 70px;
+  padding: 0 20px 0 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  justify-content: space-around;
+  margin-top: 0;
+}
+
+header nav .menu {
+  font-size: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+}
+
+header nav .logo {
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+header nav button {
+  height: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* style category and dropdown */
+
+.cat-dropbtn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cat-dropbtn a {
+  position: relative;
+  bottom: -25px;
+}
+.cat-dropbtn:hover {
+  color: var(--main-color);
+}
+
+.cat-dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: white;
+  margin-top: 60px;
+  padding: 20px 100px 50px 15px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+}
+.cat-dropdowncontent a {
+  display: block;
+  color: #1c1d1f;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.cat-dropdowncontent a:hover {
+  color: var(--main-color);
+}
+.cat-dropdown:hover .cat-dropdowncontent {
+  display: block;
+}
+
+/* style Search bar*/
+
+.search-bar {
+  display: inline;
+  width: 50%;
+  height: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50px;
+  display: flex;
+}
+
+.search-bar .searchBar {
+  width: 90%;
+  height: 70%;
+  display: block;
+  margin: auto;
+  border: none;
+  outline-style: none;
+}
+
+.search-bar .search-form {
+  width: 95%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.search-bar .search-form #searchButton {
+  margin: auto;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.search-bar .search-form #searchButton:hover {
+  color: grey;
+}
+
+/* style udemy business dropdown */
+
+.u1-dropdowncontent {
+  display: none;
+  position: absolute;
+  margin-top: 60px;
+  background-color: white;
+  width: 20%;
+  height: 15%;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+}
+.u1-dropdowncontent > h3 {
+  text-align: center;
+}
+.u1-dropdowncontent > h3 span a {
+  background-color: #1c1d1f;
+  padding: 15px 40px 15px 40px;
+  color: white;
+}
+.u1-dropdowncontent > h3 span a:hover {
+  background-color: #1c1d1f;
+}
+.u-dropdown:hover .u1-dropdowncontent {
+  display: block;
+}
+.u1-dropbtn:hover {
+  color: var(--main-color);
+}
+
+/* style teach on udemy dropdown */
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #1c1d1f;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  bottom: -25px;
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+}
+.u2-dropcontent {
+  display: none;
+  position: absolute;
+  padding: 0px 20px 0px 20px;
+  margin-top: 60px;
+  background-color: white;
+  width: 20%;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+}
+.u2-dropcontent > h3 {
+  text-align: center;
+}
+.u2-dropcontent > h3 span a {
+  background-color: #1c1d1f;
+  padding: 15px 40px 15px 40px;
+  color: white;
+}
+.u2-dropcontent a {
+  color: #1c1d1f;
+  text-decoration: none;
+  display: block;
+}
+.uu-dropdown:hover .u2-dropcontent {
+  display: block;
+}
+.u2-dropbtn:hover {
+  color: var(--main-color);
+}
+
+/*stle cart icon*/
+
+#cart {
+  font-size: 24px;
+  color: #1c1d1f;
+  float: center;
+  position: relative;
+  bottom: -25px;
+}
+#cart:hover {
+  color: var(--main-color);
+}
+
+/*style account (log in sigh up lang)*/
+
+header nav .btn-style {
+  height: 60%;
+  width: 90px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0;
+  border-width: 1px;
+  background-color: white;
+  cursor: pointer;
+}
+
+header nav .btn-logo {
+  width: 40px;
+}
+
+header nav .btn-style:hover {
+  background-color: rgb(0, 0, 0, 5%);
+}
+
+header nav .btn-inv {
+  color: white;
+  background-color: #1c1d1f;
+  cursor: pointer;
+}
+
+header nav .btn-inv:hover {
+  background-color: #1c1d1f;
+}
+
+/* Medium */
+@media (max-width: 992px) {
+  .nav-link,
+  #cart {
+    display: none;
+  }
+}
+
+/* Small */
+@media (max-width: 768px) {
+  header nav .search-bar,
+  .btns {
+    display: none;
+  }
+
+  header nav {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 769px) {
+  header nav .menu {
+    display: none;
+  }
+}
+
+/* --------------------style Card-------------------------------------*/
+
+.card-style .card img {
+  width: 100%;
+}
+
+.card-style .card .card-info {
+  line-height: 1;
+  background-color: white;
+  padding: 20px;
+}
+
+.card-style .card .card-info h2 {
+  font-size: 30px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+.card-style .card .card-info p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .card-style .card {
+    position: relative;
+  }
+
+  .card-style .card .card-info {
+    width: 350px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    box-shadow: 2px 2px 5px grey;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-style .card {
+    padding: 10px;
+    box-shadow: 2px 2px 10px grey;
+  }
+}
+
+/*--------------------style Coursrs-----------------------------*/
+
+/* Main */
+
+main{
+  width: 85%;
+  margin: 40px auto 20px auto;
+}
+
+main h2{
+  font-family: Georgia,Times,"times new roman",serif;
+  margin-bottom: 15px;
+}
+
+main p{
+  font-size: 18px;
+}
+
+.listOfTabs{
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+.listOfTabs li{
+  display: inline;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #606060;
+  font-family: "udemy sans",Helvetica,Arial,sans-serif;
+  cursor: pointer;
+}
+
+.listOfTabs li:hover{
+  color: black;
+}
+
+.activeCategory{
+  color: black !important;
+  cursor:context-menu !important;
+}
+
+#category{
+  border: 1px solid #d1d7dc;
+  padding: 30px 30px;
+}
+
+#category button{
+  cursor: pointer;
+}
+
+#desc{
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 800px;
+  font-size: 16px;
+  
+}
+
+#category > button{
+  border: solid rgb(28, 29, 31) 1px;
+  color: #1c1d1f;
+  font-weight:bold;
+  padding: 8px 8px;
+  margin-bottom: 30px;
+}
+
+#category > button:hover{
+  background-color: #f5f5f5;
+  color: #1c1d1f;
+}
+
+
+#courses{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.course{
+  overflow: hidden;
+  margin: 15px 10px;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+
+  width: 225px;
+  height: fit-content;
+  min-height: 250px;
+}
+
+.course > *{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.courseName{
+  font-size: 15px;
+}
+
+.instructor, .users{
+  font-size: 0.73rem;
+  font-weight: normal;
+  color: 	#585858;
+}
+
+.rating{
+  color: orange;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.price{
+  font-weight: bold;
+  color: #000000;
+  size: 16px;
+  margin-right: 10px;
+}
+
+.oldPrice{
+  text-decoration: line-through;
+  font-weight: normal;
+  color: #585858;
+  size: 16px;
+}
+
+.bestseller{
+  background-color: #eaeb93;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.disappear{
+  display: none;
+}
+.Searchresult{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+#searchButton{
+  cursor: pointer;   
+}
+
+
+/* -------------------Category-------------------------------*/
+
+.category {
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 24px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.category img {
+  max-width: 200px;
+}
+
+.category h2 {
+  margin: 0px 0 4px 0;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #1c1d1f;
+  font-size: medium;
+}
